@@ -108,7 +108,7 @@ jobs:
         echo "${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
 
     - name: Scan with Scout
-      uses: docker/scout-action@v1.15.1
+      uses: docker/scout-action@v1.16.0
       with:
         command: quickview,compare
         image: ${{ vars.DOCKER_USERNAME }}/spring-boot-learning:${{ steps.meta.outputs.version }}
